@@ -30,6 +30,19 @@ Pattern displayed here...
 You can locate the offset byte location by using the `-o` flag and entering a required egg (in ascii or hex)
 
 ```
+λ haxpattern.exe -o -e 0x38446939
+
+=====================================================
+[+] Creating pattern of 20280 bytes
+[+] Looking for egg 8Di9 in pattern of 20280 bytes
+[+] Egg pattern 8Di9 found in cyclic pattern at position 2606
+
+=====================================================
+```
+
+You can pass hex values using or ommiting the `0x` prefix. The offset can also be found in reversed hex values
+
+```
 λ haxpattern.exe -o -e 39694438
 
 =====================================================
