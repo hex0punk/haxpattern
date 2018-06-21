@@ -113,16 +113,16 @@ func LocatePattern(s *State) (int, error) {
 			asciiPat := s.Egg
 			fmt.Printf("[+] Looking for egg %s in pattern of %d bytes\n", asciiPat, s.Size)
 
-			if strings.Contains(comparePattern, asciiPat) {
-				patIdx := strings.Index(comparePattern, asciiPat)
+			patIdx := strings.Index(comparePattern, asciiPat)
+			if patIdx > -1 {
 				output := fmt.Sprintf("[+] Egg pattern %s found in cyclic pattern%sat position %d\n", asciiPat, extraText, patIdx)
 				color.Green(output)
 				return patIdx, nil
 			} else {
 				//Reversed perhaps
 				asciiPatRev := ReverseString(asciiPat)
-				if strings.Contains(comparePattern, asciiPatRev) {
-					patIdx := strings.Index(comparePattern, asciiPatRev)
+				patIdx := strings.Index(comparePattern, asciiPatRev)
+				if patIdx > -1 {
 					output := fmt.Sprintf("[+] Egg pattern %s (%s reversed) found in cyclic pattern%sat position %d\n", asciiPatRev, asciiPat, extraText, patIdx)
 					color.Green(output)
 					return patIdx, nil
