@@ -52,3 +52,16 @@ You can pass hex values using or ommiting the `0x` prefix. The offset can also b
 
 =====================================================
 ```
+
+Egg values can also be passed as 4 ascii characters
+
+```
+ haxpattern.exe -o -e Cm4C
+
+=====================================================
+[+] Creating pattern of 20280 bytes
+[+] Looking for egg Cm4C in pattern of 20280 bytes
+[+] Egg pattern Cm4C found in cyclic pattern at position 1932
+
+=====================================================
+```
